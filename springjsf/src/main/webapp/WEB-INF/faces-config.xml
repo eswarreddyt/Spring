@@ -1,0 +1,54 @@
+<!-- Modifications: ENH860, ENH511, ENHT0085, CCCV-D942, ENH858, ENH855, ENH863, ENH859, CCCV-D806, ENH869, ENH947 -->
+<!--                CCCV-E549, CCCV-E705, ENH995, ENH966 ENH965, P0158, ENH911, WMA-20, ENH915, ENH951, CCCV-E821, ENH813 -->
+<!--                WMA-470, ENH1044, ENH1050, ENH1045, WMA-844, WMA-1002, ENH1081, ENH795 -->
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2"	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+	<application>
+		<!-- Declare Facelet ViewHandler -->
+		<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+
+		<!-- Declare Spring's variable resolver to allow access to Spring beans -->
+		<variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver>
+
+		<!-- Declare custom navigation handler decorator -->
+	
+		
+		<!-- Declare el resolver -->
+		
+		
+
+		<!-- Locale support -->
+		<locale-config>
+			<default-locale>en</default-locale>
+			<supported-locale>en</supported-locale>
+			<supported-locale>es</supported-locale>
+			<supported-locale>fr</supported-locale>
+		</locale-config>
+		<message-bundle>com.csc.fsg.life.webapp.common.Message</message-bundle>
+	</application>
+
+	<!-- Custom Components -->
+	
+
+	<!-- Custom Renderers -->
+	
+	<!-- Custom Converters -->
+
+
+	<!-- Custom Phase Listener -->
+	
+	<!-- Navigation Rules -->
+	
+
+	<!-- Managed Beans -->
+	<managed-bean>
+		<managed-bean-name>notesBean</managed-bean-name>
+		<managed-bean-class>org.eswar.training.bean.NotesBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>notesRepository</property-name>
+			<value>#{notesRepository}</value>
+		</managed-property>
+	</managed-bean>
+	
+	
+</faces-config>
